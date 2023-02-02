@@ -15,10 +15,10 @@ print('瓶装类垃圾桶为1号，其他垃圾桶为2号，纸张回收垃圾�
 binList = []
 binNum = int(input('今日运回的垃圾桶数量是（个）：'))
 tmp = 1
-while(tmp != binNum+1):
+while tmp != binNum+1:
     try:
         numering=int(input(f'垃圾桶{tmp}的编号为：'))
-        if ([1,2,3,4].count(numering)<=0):
+        if [1, 2, 3, 4].count(numering)<=0:
             raise ValueError 
     except ValueError:
         print('您输入的数字不代表任何一种垃圾桶的编号，请重新输入。')
@@ -27,8 +27,8 @@ while(tmp != binNum+1):
         tmp += 1
 harmfulTrash = 0
 no = 0
-while (no != binNum):
-    while (binList[no] == 4):
+while no != binNum:
+    while binList[no] == 4:
         harmfulTrash += 1
         break
     no += 1
